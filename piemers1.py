@@ -23,4 +23,6 @@ print(Maize.get_total_price())
 
 Pirkumi = PirkumuGrozs()
 Pirkumi.pievienot_grozam(Olas)
+Pirkumi.pievienot_grozam(Maize)
 Pirkumi.get_total_price(Olas)
+Pirkumi.get_total_price(Maize)
