@@ -13,4 +13,5 @@ sk1 = Skolens("Jana","Liepa","10.a")
 sk2 = Skolens("Eva","Ozola","12.c")
 
 print(sk1.klase) # The __init__() Function
+
 sk2.grupa() # Object Methods
