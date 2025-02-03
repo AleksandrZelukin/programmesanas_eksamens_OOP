@@ -1,17 +1,17 @@
-class Vehicle:
+class Transports:
     def go (self):
         pass
 
-class Car(Vehicle):
+class Car(Transports):
     def go (self):
         print("Your drive the car")
 
-class Motorcycle(Vehicle):
+class Motorcycle(Transports):
     def go (self):
         print("You ride the motorcycle")
 
         
-vehicle = Vehicle()
+transports = Transports()
 car = Car()
 motorcycle = Motorcycle()
 car.go()

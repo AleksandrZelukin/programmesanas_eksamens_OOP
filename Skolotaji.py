@@ -23,18 +23,18 @@ class SakumskolasSkolotajs(Skolotajs):
         print(f"Pasniedz visus priekšmetus {self.klase}. klasē")
 
 
-# Atvasinātā klase VidusskolasSkolotajs
-class VidusskolasSkolotajs(Skolotajs):
+# Atvasinātā klase PamatskolasSkolotajs
+class PamatskolasSkolotajs(Skolotajs):
     def __init__(self, uzvards, pirmais_prieksmets, otrais_prieksmets, stundu_skaits_pirmais, stundu_skaits_otrais):
         super().__init__(uzvards, stundu_skaits_pirmais + stundu_skaits_otrais)
-        self.skolotaja_tips = 3  # Vidusskolas skolotājs
+        self.skolotaja_tips = 3  # Pamatskolas skolotājs
         self.pirmais_prieksmets = pirmais_prieksmets
         self.otra_prieksmets = otrais_prieksmets
         self.stundu_skaits_pirmais = stundu_skaits_pirmais
         self.stundu_skaits_otrais = stundu_skaits_otrais
 
     def print_info(self):
-        print(f"Skolotāja tips: Vidusskolas skolotājs")
+        print(f"Skolotāja tips: Pamatskolas skolotājs")
         print(f"Uzvārds: {self.uzvards}")
         print(f"Pasniedz priekšmetus: {self.pirmais_prieksmets} un {self.otra_prieksmets}")
         print(f"Kopējais stundu skaits nedēļā: {self.stundu_skaits_nedela}")
@@ -48,18 +48,18 @@ if __name__ == "__main__":
     klase = input("Ievadiet klasi, kurā sākumskolas skolotājs pasniedz: ")
     sakumskolas_skolotajs = SakumskolasSkolotajs(uzvards, stundu_skaits_nedela, klase)
 
-    # Ievade un apstrāde vidusskolas skolotājam
-    uzvards = input("\nIevadiet vidusskolas skolotāja uzvārdu: ")
+    # Ievade un apstrāde pamatskolas skolotājam
+    uzvards = input("\nIevadiet pamatskolas skolotāja uzvārdu: ")
     pirmais_prieksmets = input("Ievadiet pirmo priekšmetu: ")
     otrais_prieksmets = input("Ievadiet otro priekšmetu: ")
     stundu_skaits_pirmais = int(input("Ievadiet stundu skaitu pirmajam priekšmetam nedēļā: "))
     stundu_skaits_otrais = int(input("Ievadiet stundu skaitu otrajam priekšmetam nedēļā: "))
-    vidusskolas_skolotajs = VidusskolasSkolotajs(uzvards, pirmais_prieksmets, otrais_prieksmets, stundu_skaits_pirmais, stundu_skaits_otrais)
+    pamatskolas_skolotajs = PamatskolasSkolotajs(uzvards, pirmais_prieksmets, otrais_prieksmets, stundu_skaits_pirmais, stundu_skaits_otrais)
 
     # Izdruka sākumskolas skolotājam
     print("\n--- Sākumskolas skolotāja informācija ---")
     sakumskolas_skolotajs.print_info()
 
-    # Izdruka vidusskolas skolotājam
-    print("\n--- Vidusskolas skolotāja informācija ---")
-    vidusskolas_skolotajs.print_info()
+    # Izdruka pamatskolas skolotājam
+    print("\n--- pamatskolas skolotāja informācija ---")
+    pamatskolas_skolotajs.print_info()
